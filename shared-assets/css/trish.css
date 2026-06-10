@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+.slide:hover, .slide:focus {
+  bottom: 5px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.slide {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 275px;
+  height: 250px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.slide {
+  -webkit-animation: slide 30s cubic-bezier(0, 0, 0, 0) both;
+  animation: slide 30s cubic-bezier(0, 0, 0, 0) both;
+}
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+}
+.bubble {
+  position: relative;
+  left: 280px;
+  bottom: -45px;
+  height: 147px;
+  width: 150px;
+  -webkit-animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
+  animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
+}
+@-webkit-keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.trish {
+  width: 294px;
+  height: 80px;
+  background: url('../images/trish.png') left center;
+}
+@media (max-width: 992px) {
+  .bubble {
+    -webkit-animation: bubble 100s cubic-bezier(0, 0, 0, 0) both;
+    animation: bubble 100s cubic-bezier(0, 0, 0, 0) both;
+  }
+  .slide {
+    -webkit-animation: slide 15s cubic-bezier(0, 0, 0, 0) both;
+    animation: slide 15s cubic-bezier(0, 0, 0, 0) both;
+  }
+}
