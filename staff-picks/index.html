@@ -46,7 +46,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<script src="../shared-assets/js/biblioList.js?62722"></script>
+<script src="../shared-assets/js/biblioList.js?6722"></script>
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
@@ -76,22 +76,17 @@
 	border: 6px solid #fff;
 	border-radius: 50%;
 	box-sizing: border-box;
-	height: 112px;
+	height: 124px;
 	margin: 0 auto;
-	width: 112px;
+	width: 124px;
 }
 .gray-circle {
 	border: 6px solid #e6e4e2;
 	border-radius: 50%;
-	box-sizing: border-box;
-	color: #42777B;
-	background-color: #fff;
-	font-size: 42px;
-	height: 100px;
-	line-height: 90px;
+	height: 112px;
 	margin: 0 auto;
 	text-align: center;
-	width: 100px;
+	width: 112px;
 }
 .white-bottom-row {
 	background: #ffffff;
@@ -150,8 +145,6 @@
 }
 .shelf-shadow {
 	background: none;
-	border-left: inherit;
-	border-right: inherit;
 }
 .shelf-container {
 	max-width: 575px;
@@ -164,6 +157,15 @@
 @media (max-width: 915px) {
 .box-wrapper {
 	max-width: 600px;
+}
+}
+
+@media (max-width: 525px) {
+.fit {
+	font-size: 36px;
+}
+.jumbo-text.text-uppercase.font-weight-400 {
+	line-height: 40px;
 }
 }
 </style>
@@ -224,16 +226,17 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
           <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
           <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
           <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
-          <li><a href="../book-clubs/">Book Clubs</a></li>
-          <li><a href="../staff-picks/">Staff Picks</a></li>
+          <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
         </ul>
       </li>
-      <li class="whats-new-active"><a href="#">What's New</a> </li>
+      <li class="whats-new-active"><a href="../whats-new/">What's New</a> </li>
       <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <i class="fa-solid fa-chevron-down"></i> </a>
         <ul class="dropdown-menu">
           <li><a href="../locations/">Hours & Locations</a></li>
           <li><a href="../library-basics/">Library Basics</a></li>
           <li><a href="../library-perks/">Library Perks</a></li>
+          <li><a href="../book-clubs/">Book Clubs</a></li>
+          <li><a href="../staff-recommendations/">Staff Recommendations</a></li>
           <li><a href="../business/">DCL for Business</a></li>
           <li><a href="../adult-education/">Adult Education & Test Prep</a></li>
           <li><a href="../ageless/">Ageless Adults</a></li>
@@ -241,30 +244,30 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
       </li>
       <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <i class="fa-solid fa-chevron-down"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Storytime</a></li>
-          <li><a href="#">Read, Listen, Watch</a></li>
-          <li><a href="#">Parents</a></li>
-          <li><a href="#">Teachers</a></li>
-          <li><a href="#">Camp DCL</a></li>
-          <li><a href="#">Homework Help</a></li>
-          <li><a href="#">Teens</a></li>
+          <li><a href="../storytime/">Storytime</a></li>
+          <li><a href="../read-listen-watch/">Read, Listen, Watch</a></li>
+          <li><a href="../parents/">Parents</a></li>
+          <li><a href="../teachers/">Teachers</a></li>
+          <li><a href="../camp-dcl/">Camp DCL</a></li>
+          <li><a href="../research/students/">Homework Help</a></li>
+          <li><a href="../teens/">Teens</a></li>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
       <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <i class="fa-solid fa-chevron-down"></i> </a>
         <ul class="dropdown-menu">
-          <li><a href="#">Reserve a Space</a></li>
-          <li><a href="#">My Reservations</a></li>
+          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
         </ul>
       </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <i class="fa-solid fa-chevron-down"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Featured Events</a></li>
-          <li><a href="#">Events Calendar</a></li>
-          <li><a href="#">My Events</a></li>
+          <li><a href="../featured-events/">Featured Events</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
-      <li class="research-active"><a href="#">Research</a></li>
+      <li class="research-active"><a href="../research/">Research</a></li>
     </ul>
   </div>
 </nav>
@@ -289,16 +292,17 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
                   <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
                   <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
                   <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
-                  <li><a href="../book-clubs/">Book Clubs</a></li>
-                  <li><a href="../staff-picks/">Staff Picks</a></li>
+                  <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
                 </ul>
               </li>
-              <li class="whats-new-active mobile-nav-heading"><a href="#">What's New</a> </li>
+              <li class="whats-new-active mobile-nav-heading"><a href="../whats-new/">What's New</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#using-the-library">Library Info <i class="fa-solid fa-chevron-down"></i> </a>
                 <ul id="using-the-library" class="nav mobile-nav-list collapse">
                   <li><a href="../locations/">Hours & Locations</a></li>
                   <li><a href="../library-basics/">Library Basics</a></li>
                   <li><a href="../library-perks/">Library Perks</a> </li>
+                  <li><a href="../book-clubs/">Book Clubs</a></li>
+                  <li><a href="../staff-recommendations/">Staff Recommendations</a></li>
                   <li><a href="../business/">DCL for Business</a></li>
                   <li><a href="../adult-education/">Adult Education & Test Prep</a></li>
                   <li><a href="../ageless/">Ageless Adults</a></li>
@@ -306,30 +310,30 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
               </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#kids-teens">Kids & Teens <i class="fa-solid fa-chevron-down"></i> </a>
                 <ul id="kids-teens" class="nav mobile-nav-list collapse">
-                  <li><a href="#">Storytime</a></li>
-                  <li><a href="#">Read, Listen, Watch</a></li>
-                  <li><a href="#">Parents</a></li>
-                  <li><a href="#">Teachers</a></li>
-                  <li><a href="#">Camp DCL</a></li>
-                  <li><a href="#">Homework Help</a></li>
-                  <li><a href="#">Teens</a></li>
+                  <li><a href="../storytime/">Storytime</a></li>
+                  <li><a href="../read-listen-watch/">Read, Listen, Watch</a></li>
+                  <li><a href="../parents/">Parents</a></li>
+                  <li><a href="../teachers/">Teachers</a></li>
+                  <li><a href="../camp-dcl/">Camp DCL</a></li>
+                  <li><a href="../research/students/">Homework Help</a></li>
+                  <li><a href="../teens/">Teens</a></li>
                 </ul>
               </li>
-              <li class="digital-media-active mobile-nav-heading"><a href="#">Digital Media</a> </li>
+              <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <i class="fa-solid fa-chevron-down"></i> </a>
                 <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
-                  <li><a href="#">Reserve a Space</a></li>
-                  <li><a href="#">My Reservations</a></li>
+                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
                 </ul>
               </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <i class="fa-solid fa-chevron-down"></i> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
-                  <li><a href="#">Featured Events</a></li>
-                  <li><a href="#">Events Calendar</a></li>
-                  <li><a href="#">My Events</a></li>
+                  <li><a href="../featured-events/">Featured Events</a></li>
+                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
-              <li class="research-active mobile-nav-heading"><a href="#">Research</a> </li>
+              <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
             </ul>
           </div>
         </div>
@@ -353,12 +357,12 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 <!-- End Mobile Navbar -->
 <main>
   <div id="content-begins" class="container-fluid"> <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-20">
-    <div class="container text-center">
-      <h1 class="page-heading">Staff</h1>
-      <div class="h1 page-heading-fit text-uppercase no-margin-top">Recommendations</div>
-      <div class="max-width-80">
-        <h2 class="page-subheading">We love to share! Follow our <a href="https://dcl.bibliocommons.com/list/share/690855847/2092525045">curated DCL accounts</a> in the catalog, then explore new books we're adding, our favorite lists, <a href="#staff-picks">featured Staff Picks</a>, and new reviews by library staff.</h2>
+  <div class="row padding-bottom-30 border-top">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Staff <br class="insert-break" />
+          <span class="fit">Recommendations</span></h1>
+        <h4 class="roboto margin-lg-150 margin-top-5">We love to share! Follow our <a href="https://dcl.bibliocommons.com/list/share/690855847/2092525045" target="_blank">DCL Staff Picks accounts</a> in the catalog; then explore new books we're adding, our favorite lists, <a href="#staff-picks">featured Staff Picks</a>, and new reviews by library staff.</h4>
       </div>
     </div>
   </div>
@@ -367,88 +371,88 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
       <div class="box-item">
         <div class="white-bottom-row">
           <div class="gray-circle-wrapper">
-            <div class="gray-circle"><i class="fa-solid fa-book-heart"></i></div>
+            <div class="gray-circle"><img src="just-for-you.png" alt=""></div>
           </div>
         </div>
         <div class="box-item-inner">
-          <div class="h3 text-center margin-top-10"><a href="../staff-recommendations/readers-advisory" target="_blank">Just for You</a></div>
+          <h3 class="text-center margin-top-10"><a href="readers-advisory/" target="_blank">Just for You</a></h3>
           <div>Looking for a good read, but fresh out of ideas? We can help! Tell us what you're interested in&mdash;even what you're <i>not</i> interested in&mdash;and our Readers Advisory staff will provide personalized reading suggestions just for you.</div>
         </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
           <div class="gray-circle-wrapper">
-            <div class="gray-circle"><i class="fa-solid fa-star-sharp"></i></div>
+            <div class="gray-circle"><img src="top-checkouts.png" alt=""></div>
           </div>
         </div>
         <div class="box-item-inner">
-          <div class="h3 text-center margin-top-10"><a href="../top-checkouts">Top Checkouts of 2025</a></div>
-          <div>DCL lends nearly 6 million items each year through our seven locations. Wondering which books, audiobooks and DVDs were most popular last year? Find out here!</div>
+          <h3 class="text-center margin-top-10"><a href="../top-checkouts/">Top Checkouts of 2021</a></h3>
+          <div>DCL lends nearly 7 million items each year through our seven locations. Wondering which books, audiobooks and DVDs were most popular last year? Find out here!</div>
         </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
           <div class="gray-circle-wrapper">
-            <div class="gray-circle"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="gray-circle"><img src="reading-challenge.png" alt=""></div>
           </div>
         </div>
         <div class="box-item-inner">
-          <div class="h3 text-center margin-top-10"><a href="../reading-challenge">DCL Reading Challenge</a></div>
-          <div>The Douglas County Libraries Reading Challenge is back with new challenge items to encourage you to broaden your reading this year.</div>
+          <h3 class="text-center margin-top-10"><a href="../reading-challenge/">DCL Reading Challenge</a></h3>
+          <div>The Douglas County Libraries Reading Challenge is back with new challenge items to encourage you to broaden your reading in 2022.</div>
         </div>
       </div>
     </div>
   </div>
   <div id="staff-picks" class="row padding-top-30 padding-bottom-15">
     <div class="container">
-      <div class="text-center max-width-80">
-        <div class="h1 no-margin-bottom">Featured Staff Picks</div>
-        <div class="h5 margin-top-5 margin-bottom-5">We're excited about all books, but we're especially jazzed about these new and noteworthy titles. Add one to your reading list today!</div>
-        <div class="margin-bottom-10">Looking for recommendations for kids? Check out <a href="../read-listen-watch">Read, Listen, Watch</a>.</div>
-        <a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">View All Staff Picks &raquo;</a> </div>
+      <div class="text-center margin-lg-150">
+        <h1 class="no-margin-bottom">Featured Staff Picks</h1>
+        <h4 class="margin-top-5 margin-bottom-5">We're excited about all books&mdash;we're librarians! But we're especially jazzed about these new and noteworthy titles&mdash;add one to your reading list today!</h4>
+        <div class="margin-bottom-10">Looking for recommendations for kids? Check out <a href="../read-listen-watch/">Read, Listen, Watch</a>.</div>
+        <a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">View All Staff Picks &raquo;</a> </div>
     </div>
   </div>
   <div id="new-noteworthy" class="text-center">
-    <div class="h2 no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">New &amp; Noteworthy</a></div>
+    <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">New &amp; Noteworthy</a></h2>
   </div>
   <div id="Noteworthy"> </div>
   <div class="row padding-bottom-60">
     <div class="shelf-shadow">
-      <div class="padding-top-40 text-center max-width-80">This select list, chosen by an expert curator of our fiction collection, includes highly anticipated titles plus some hidden gems she just couldn't pass up. Put some (or all) on hold to discover something a little different.
-        <div class="padding-top-15"><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">See Entire List &raquo;</a></div>
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> This select list, chosen by an expert curator of our fiction collection, includes highly anticipated titles plus some hidden gems she just couldn't pass up. Put some (or all) on hold to discover something a little different.
+        <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">See Entire List &raquo;</a></div>
       </div>
     </div>
   </div>
   <div id="young-adult" class="text-center">
-    <div class="h2 no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/1084535587">Must-Read Young Adult</a></div>
+    <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/1084535587">Must-Read Young Adult</a></h2>
   </div>
   <div id="YoungAdult"></div>
   <div class="row padding-bottom-60">
     <div class="shelf-shadow">
-      <div class="padding-top-40 text-center max-width-80">The young adult fiction on this list is hand-picked by one of our expert librarians. These are some of the hottest new books hitting our shelves. Add them to your must-read list, and enjoy!
-        <div class="padding-top-15"><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/1084535587">See Entire List &raquo;</a></div>
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> The young adult fiction on this list is hand-picked by one of our expert librarians. These are some of the hottest new books hitting our shelves. Add them to your must-read list, and enjoy!
+        <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/1084535587">See Entire List &raquo;</a></div>
       </div>
     </div>
   </div>
   <div id="listen" class="text-center">
-    <div class="h2 no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1038936337">Listen to This</a></div>
+    <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1038936337">Listen to This</a></h2>
   </div>
   <div id="ListenToThis"></div>
   <div class="row padding-bottom-60">
     <div class="shelf-shadow">
-      <div class="padding-top-40 text-center max-width-80">These audiobooks are specially chosen by our librarians for your listening enjoyment. They include everything from fiction, nonfiction and science fiction to thriller/suspense, mystery and humor — and more. Start your list here, and tune in.
-        <div class="padding-top-15"><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1038936337">See Entire List &raquo;</a></div>
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> These audiobooks are specially chosen by our librarians for your listening enjoyment. They include everything from fiction, nonfiction and science fiction to thriller/suspense, mystery and humor — and more. Start your list here, and tune in.
+        <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1038936337">See Entire List &raquo;</a></div>
       </div>
     </div>
   </div>
   <div id="reading-now" class="text-center">
-    <div class="h2 no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1826346254">What We Are Reading Now</a></div>
+    <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1826346254">What We Are Reading Now</a></h2>
   </div>
   <div id="DCLAdults"></div>
   <div class="row padding-bottom-60">
     <div class="shelf-shadow">
-      <div class="padding-top-40 text-center max-width-80">We love books, so it shouldn’t surprise you that we also love reading. There’s nothing better than digging into a new book or revisiting ones we’ve already read. Here are some that the DCL book team is currently reading.
-        <div class="padding-top-15"><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1826346254">See Entire List &raquo;</a></div>
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> We love books, so it shouldn’t surprise you that we also love reading. There’s nothing better than digging into a new book or revisiting ones we’ve already read. Here are some that the DCL book team is currently reading.
+        <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1826346254">See Entire List &raquo;</a></div>
       </div>
     </div>
   </div>
@@ -472,32 +476,32 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
       <div class="footer-column">
         <div class="h5">About</div>
         <ul>
-          <li><a href="#">Who We Are</a></li>
-          <li><a href="#">Our Foundation</a></li>
-          <li><a href="#">Join Our Team</a></li>
-          <li><a href="#">Press Kit</a></li>
+          <li><a href="../who-we-are/">Who We Are</a></li>
+          <li><a href="../foundation/">Our Foundation</a></li>
+          <li><a href="../join-our-team/">Join Our Team</a></li>
+          <li><a href="../press-kit/">Press Kit</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Contact</div>
         <ul>
-          <li><a href="#">Help & FAQs</a></li>
-          <li><a href="#">DCL Open Records Request</a></li>
+          <li><a href="../help/">Help & FAQs</a></li>
+          <li><a href="../board/cora-request/">DCL Open Records Request</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Connect</div>
         <ul>
-          <li><a href="#">eNews Sign-Up</a></li>
-          <li><a href="#" target="_blank">Archives & Local History</a></li>
+          <li><a href="../newsletters/">eNews Sign-Up</a></li>
+          <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Support</div>
         <ul>
-          <li><a href="#">Donate Now</a></li>
-          <li><a href="#">Ways to Give</a></li>
-          <li><a href="#">Volunteer</a></li>
+          <li><a href="../donate/">Donate Now</a></li>
+          <li><a href="../ways-to-give/">Ways to Give</a></li>
+          <li><a href="../volunteer/">Volunteer</a></li>
         </ul>
       </div>
     </div>
@@ -507,8 +511,8 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
   <div class="container">
     <div class="copyright">
       <div class="copyright-left">
-        <div><a href="#">Website Accessibility</a></div>
-        <div><a href="#">Website Privacy</a></div>
+        <div><a href="../website-accessibility/">Website Accessibility</a></div>
+        <div><a href="../website-privacy/">Website Privacy</a></div>
       </div>
       <div class="copyright-right">&copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a></div>
     </div>
@@ -540,7 +544,8 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.dclblog.org",
+		"https:\/\/www.blogs.douglascountylibraries.org",
+		"https:\/\/help.dcl.org/",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
@@ -554,10 +559,6 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 <!-- pull alert.txt into the general-alert div --> 
 
 <!-- BiblioCommons APK --> 
-<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
-e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
-e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
-<!-- Patron Point --> 
 
 <!-- Patron Point --> 
 
